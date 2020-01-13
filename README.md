@@ -1,8 +1,8 @@
-# 招行区块链停车管理平台
+# 企业级Vue脚手架
 
 ## 运行项目
 
-版本依赖：node>=8及其对应的npm，建议使用yarn做包管理器
+版本依赖：node>=10.17及其对应的npm，建议使用yarn做包管理器
 
 ```
 $ yarn （安装依赖）
@@ -26,22 +26,31 @@ $ npm run build （打包项目，项目会被打包到dist目录下）
 ├── src（源码）
 │   ├── App.vue（入口vue）
 │   ├── api（api封装）
-│   │   ├── base.js
+│   │   ├── BaseApi.js（api基类）
+│   │   ├── UserApi.js（用户API类）
 │   │   └── index.js
 │   ├── assets（静态资源）
+│   │   ├── css
+│   │   └── img
 │   ├── common（一些可选用模块）
 │   │   ├── bus.js（全局bus通信）
-│   │   ├── directives.js（自定义指令）
+│   │   └── directives.js（自定义指令）
 │   ├── components（公共组件）
-│   ├── main.js
+│   ├── main.js（入口）
 │   ├── page（路由页面）
 │   ├── public（公共）
 │   │   ├── constant.js（常量）
 │   │   ├── help.js（辅助函数）
 │   │   └── storage.js（storage存储）
+│   │   └── request.js（axios二次封装）
 │   ├── store（vuex状态管理）
-│   ├── router（路由）
-│   └── utils
+│   └── router（路由）
+│   │   ├── home.js（home的路由）
+│   │   └── index.js
+├── .env.dev（dev环境变量）
+├── .env.prod（prod环境变量）
+├── .env.st（st环境变量）
+├── .env.uat（uat环境变量）
 ├── vue.config.js（vue-cli配置）
 └── yarn.lock
 ```
@@ -50,7 +59,7 @@ $ npm run build （打包项目，项目会被打包到dist目录下）
 ## 代码风格
 
 参考[代码规范指南](./CODESTYLE.md)
-希望尽量按照这个规范，会有eslint约定其中一部分规范，并且我会进行一个不算严格的简单code review。
+希望尽量按照这个规范，会有eslint约定其中一部分规范，该eslint是对应是devops的sonar静态检测，项目地址为：https://github.com/rhythm1995/eslint-config-virgo，可以在项目中查看每一条的含义。
 
 
 ## Git工作流
