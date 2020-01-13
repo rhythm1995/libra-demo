@@ -32,7 +32,6 @@ $ npm run build （打包项目，项目会被打包到dist目录下）
 │   ├── common（一些可选用模块）
 │   │   ├── bus.js（全局bus通信）
 │   │   ├── directives.js（自定义指令）
-│   │   └── i18n.js（国际化）
 │   ├── components（公共组件）
 │   ├── main.js
 │   ├── page（路由页面）

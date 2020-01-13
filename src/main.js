@@ -4,7 +4,6 @@ import App from './App.vue';
 
 /* 内部模块 */
 import router from './router';
-import VueI18n from 'vue-i18n';
 import store from './store';
 
 /* 样式库 */
@@ -13,7 +12,6 @@ import 'element-ui/lib/theme-chalk/index.css'; // 默认主题
 // import './assets/css/theme-green/index.css'; // 浅绿色主题
 import './assets/css/icon.css';
 // import './components/common/directives';
-// import { messages } from './components/common/i18n';
 import 'babel-polyfill';
 
 /* 公共模块 */
@@ -31,13 +29,8 @@ Vue.prototype.$api = apiFactory(request); // 尽量采用这种方式定义接�
 Vue.prototype.$http = request;
 
 Vue.config.productionTip = false;
-Vue.use(VueI18n);
 Vue.use(ElementUI, {
   size: 'small',
-});
-
-const i18n = new VueI18n({
-  locale: 'zh'
 });
 
 /* 使用钩子函数对路由进行权限跳转 */
@@ -56,6 +49,5 @@ router.beforeEach((to, from, next) => {
 
 new Vue({
   router,
-  i18n,
   render: (h) => h(App),
 }).$mount('#app');
