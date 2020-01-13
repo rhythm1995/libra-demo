@@ -17,7 +17,7 @@ import './assets/css/icon.css';
 import 'babel-polyfill';
 
 /* 公共模块 */
-import axios from 'axios'; // http库
+import request from './public/request'; // http库
 import constant from './public/constant'; // 常量
 import storage from './public/storage'; // 存储
 import help from './public/help'; // 被多处使用的辅助公共函数
@@ -27,8 +27,8 @@ import apiFactory from './api';
 Vue.prototype.$constant = constant; // 常量
 Vue.prototype.$help = help; // 辅助方法
 Vue.prototype.$storage = storage; // 本地存储 localstorage
-Vue.prototype.$api = apiFactory(axios); // 尽量采用这种方式定义接口实现复用
-Vue.prototype.$http = axios;
+Vue.prototype.$api = apiFactory(request); // 尽量采用这种方式定义接口实现复用
+Vue.prototype.$http = request;
 
 Vue.config.productionTip = false;
 Vue.use(VueI18n);
