@@ -16,19 +16,12 @@ import './assets/css/icon.css';
 // import { messages } from './components/common/i18n';
 import 'babel-polyfill';
 
-/* 按需引入可视化组件并且注册 */
-import VeLine from 'v-charts/lib/line.common';
-import VeBar from 'v-charts/lib/bar.common';
-
 /* 公共模块 */
 import axios from 'axios'; // http库
 import constant from './public/constant'; // 常量
 import storage from './public/storage'; // 存储
 import help from './public/help'; // 被多处使用的辅助公共函数
 import apiFactory from './api';
-
-Vue.component('ve-line', VeLine);
-Vue.component('ve-bar', VeBar); // api集合
 
 /* 挂载公共模块到Vue原型链上 */
 Vue.prototype.$constant = constant; // 常量
