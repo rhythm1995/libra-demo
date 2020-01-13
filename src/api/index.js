@@ -1,5 +1,5 @@
-import BaseAPI from './base';
-import UserAPI from './user';
+import BaseAPI from './BaseAPI';
+import UserAPI from './UserApi';
 
 /**
  * APIFactory
@@ -15,7 +15,7 @@ class APIFactory extends BaseAPI {
   }
 }
 
-const APIS = ($http) => {
+const api = ($http) => {
   BaseAPI.prototype.$http = $http;
 
   return Object.assign({}, {
@@ -23,4 +23,4 @@ const APIS = ($http) => {
   });
 };
 
-export default APIS;
+export default api;

@@ -1,10 +1,11 @@
+
+/* eslint-disable */
 /* 基础组件 */
 import Vue from 'vue';
 import App from './App.vue';
 
 /* 内部模块 */
 import router from './router';
-import store from './store';
 
 /* 样式库 */
 import ElementUI from 'element-ui';
