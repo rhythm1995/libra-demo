@@ -30,7 +30,7 @@ Vue.prototype.$http = request;
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI, {
-  size: 'small',
+  size: 'small'
 });
 
 /* 使用钩子函数对路由进行权限跳转 */
@@ -49,5 +49,5 @@ router.beforeEach((to, from, next) => {
 
 new Vue({
   router,
-  render: (h) => h(App),
+  render: (h) => h(App)
 }).$mount('#app');

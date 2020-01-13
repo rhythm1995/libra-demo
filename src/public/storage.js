@@ -39,10 +39,10 @@ const storage = {
       try {
         result = localStorage[action](...args);
       } catch (ex) {
-        console.error('执行异常 localStorage.' + action, ex);
+        console.error(`执行异常 localStorage.${  action}`, ex);
       }
     } else {
-      console.error('浏览器不支持 localStorage.' + action);
+      console.error(`浏览器不支持 localStorage.${  action}`);
     }
     return result;
   }

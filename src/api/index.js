@@ -19,7 +19,7 @@ const APIS = ($http) => {
   BaseAPI.prototype.$http = $http;
 
   return Object.assign({}, {
-		user: new UserAPI(),
+		user: new UserAPI()
   });
 };
 
