@@ -2,15 +2,9 @@
   <div>
     <el-row>
       <el-col>
-        <el-row
-          :gutter="20"
-          class="mgb20"
-        >
+        <el-row :gutter="20" class="mgb20">
           <el-col :span="8">
-            <el-card
-              shadow="hover"
-              :body-style="{padding: '0px'}"
-            >
+            <el-card shadow="hover" :body-style="{padding: '0px'}">
               <div class="grid-content grid-con-1">
                 <i class="el-icon-lx-people grid-con-icon"></i>
                 <div class="grid-cont-right">
@@ -21,10 +15,7 @@
             </el-card>
           </el-col>
           <el-col :span="8">
-            <el-card
-              shadow="hover"
-              :body-style="{padding: '0px'}"
-            >
+            <el-card shadow="hover" :body-style="{padding: '0px'}">
               <div class="grid-content grid-con-2">
                 <i class="el-icon-lx-notice grid-con-icon"></i>
                 <div class="grid-cont-right">
@@ -35,10 +26,7 @@
             </el-card>
           </el-col>
           <el-col :span="8">
-            <el-card
-              shadow="hover"
-              :body-style="{padding: '0px'}"
-            >
+            <el-card shadow="hover" :body-style="{padding: '0px'}">
               <div class="grid-content grid-con-3">
                 <i class="el-icon-lx-goods grid-con-icon"></i>
                 <div class="grid-cont-right">
@@ -50,46 +38,17 @@
           </el-col>
         </el-row>
         <el-card shadow="hover">
-          <div
-            slot="header"
-            class="clearfix"
-          >
+          <div slot="header" class="clearfix">
             <span>待办事项</span>
-            <el-button
-              style="float: right; padding: 3px 0"
-              type="text"
-            >添加</el-button>
+            <el-button style="float: right; padding: 3px 0" type="text">添加</el-button>
           </div>
           <template>
-            <el-table
-              :data="tableData"
-              style="width: 100%"
-            >
-              <el-table-column
-                prop="id"
-                label="ID"
-              >
-              </el-table-column>
-              <el-table-column
-                prop="name"
-                label="姓名"
-              >
-              </el-table-column>
-              <el-table-column
-                prop="age"
-                label="年龄"
-              >
-              </el-table-column>
-              <el-table-column
-                prop="createdAt"
-                label="创建日期"
-              >
-              </el-table-column>
-              <el-table-column
-                prop="updatedAt"
-                label="更新日期"
-              >
-              </el-table-column>
+            <el-table :data="tableData" style="width: 100%">
+              <el-table-column prop="id" label="ID"></el-table-column>
+              <el-table-column prop="name" label="姓名"></el-table-column>
+              <el-table-column prop="age" label="年龄"></el-table-column>
+              <el-table-column prop="createdAt" label="创建日期"></el-table-column>
+              <el-table-column prop="updatedAt" label="更新日期"></el-table-column>
             </el-table>
           </template>
         </el-card>
@@ -97,54 +56,50 @@
     </el-row>
     <el-row :gutter="24">
       <el-col :span="12">
-        <el-card shadow="hover">
-          <ve-line :data="chartData1"></ve-line>
-        </el-card>
+        <el-card shadow="hover"></el-card>
       </el-col>
       <el-col :span="12">
-        <el-card shadow="hover">
-          <ve-bar :data="chartData2"></ve-bar>
-        </el-card>
+        <el-card shadow="hover"></el-card>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-import bus from '../common/bus';
+import bus from "../common/bus";
 export default {
-  name: 'dashboard',
+  name: "dashboard",
   data() {
     return {
-      name: localStorage.getItem('ms_username'),
+      name: localStorage.getItem("ms_username"),
       tableData: [],
       chartData1: {
-        columns: ['日期', '访问用户', '下单用户', '下单率'],
+        columns: ["日期", "访问用户", "下单用户", "下单率"],
         rows: [
-          { '日期': '1/1', '访问用户': 1393, '下单用户': 1093, '下单率': 0.32 },
-          { '日期': '1/2', '访问用户': 3530, '下单用户': 3230, '下单率': 0.26 },
-          { '日期': '1/3', '访问用户': 2923, '下单用户': 2623, '下单率': 0.76 },
-          { '日期': '1/4', '访问用户': 1723, '下单用户': 1423, '下单率': 0.49 },
-          { '日期': '1/5', '访问用户': 3792, '下单用户': 3492, '下单率': 0.323 },
-          { '日期': '1/6', '访问用户': 4593, '下单用户': 4293, '下单率': 0.78 }
+          { 日期: "1/1", 访问用户: 1393, 下单用户: 1093, 下单率: 0.32 },
+          { 日期: "1/2", 访问用户: 3530, 下单用户: 3230, 下单率: 0.26 },
+          { 日期: "1/3", 访问用户: 2923, 下单用户: 2623, 下单率: 0.76 },
+          { 日期: "1/4", 访问用户: 1723, 下单用户: 1423, 下单率: 0.49 },
+          { 日期: "1/5", 访问用户: 3792, 下单用户: 3492, 下单率: 0.323 },
+          { 日期: "1/6", 访问用户: 4593, 下单用户: 4293, 下单率: 0.78 }
         ]
       },
       chartData2: {
-        columns: ['日期', '访问用户', '下单用户', '下单率'],
+        columns: ["日期", "访问用户", "下单用户", "下单率"],
         rows: [
-          { '日期': '1/1', '访问用户': 1393, '下单用户': 1093, '下单率': 0.32 },
-          { '日期': '1/2', '访问用户': 3530, '下单用户': 3230, '下单率': 0.26 },
-          { '日期': '1/3', '访问用户': 2923, '下单用户': 2623, '下单率': 0.76 },
-          { '日期': '1/4', '访问用户': 1723, '下单用户': 1423, '下单率': 0.49 },
-          { '日期': '1/5', '访问用户': 3792, '下单用户': 3492, '下单率': 0.323 },
-          { '日期': '1/6', '访问用户': 4593, '下单用户': 4293, '下单率': 0.78 }
+          { 日期: "1/1", 访问用户: 1393, 下单用户: 1093, 下单率: 0.32 },
+          { 日期: "1/2", 访问用户: 3530, 下单用户: 3230, 下单率: 0.26 },
+          { 日期: "1/3", 访问用户: 2923, 下单用户: 2623, 下单率: 0.76 },
+          { 日期: "1/4", 访问用户: 1723, 下单用户: 1423, 下单率: 0.49 },
+          { 日期: "1/5", 访问用户: 3792, 下单用户: 3492, 下单率: 0.323 },
+          { 日期: "1/6", 访问用户: 4593, 下单用户: 4293, 下单率: 0.78 }
         ]
       }
-    }
+    };
   },
   computed: {
     role() {
-      return this.name === 'admin' ? '超级管理员' : '普通用户';
+      return this.name === "admin" ? "超级管理员" : "普通用户";
     }
   },
   methods: {
@@ -156,19 +111,18 @@ export default {
   async created() {
     const data = await this.getUserList();
     this.$nextTick(() => {
-      this.tableData = data.rows.map((item) => {
+      this.tableData = data.rows.map(item => {
         return {
           id: String(item.id),
           name: item.name,
           age: String(item.age),
           createdAt: item.updatedAt,
           updatedAt: item.updatedAt
-        }
+        };
       });
     });
-  },
-}
-
+  }
+};
 </script>
 
 <style lang="less" scoped>
