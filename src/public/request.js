@@ -1,4 +1,6 @@
-
+/**
+ * axios二次封装
+ */
 /* eslint-disable */
 import axios from 'axios';
 import storage from './storage';
