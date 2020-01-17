@@ -92,7 +92,7 @@ $ npm run build
 ## 代码风格
 
 参考[代码规范指南](./CODESTYLE.md)
-希望尽量按照这个规范，会有eslint约定其中一部分规范，该eslint是对应是devops的sonar静态检测，项目地址为：https://github.com/rhythm1995/eslint-config-virgo，可以在项目中查看每一条的含义。
+希望尽量按照这个规范，会有eslint约定其中一部分规范，该eslint是对应是devops的sonar静态检测，项目地址为：https://github.com/rhythm1995/eslint-config-virgo ，可以在项目中查看每一条的含义。
 
 
 ## Git工作流
@@ -113,7 +113,7 @@ $ npm run build
 1. fork组织项目到自己仓库
 2. git pull 自己仓库的项目。
 3. 个人在「develop」分支开发项目。
-4. git remote add upstream http://mayun.cmbchina.io/olp/LV02_OPBCFrontEnd   // 本地添加远程主分支。
+4. git remote add upstream http://****   // 本地添加远程主分支。
 5. git fetch upstream   // 获取主分支的最新修改到本地。
 6. git merge upstream/develop   // 将远程分支的「develop分支merge到本地。
 7. git push origin  // 将本地修改提交到个人分支。
