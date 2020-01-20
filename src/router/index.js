@@ -43,6 +43,7 @@ const router = new Router({
 });
 
 /* 使用钩子函数对路由进行权限跳转 */
+/*
 router.beforeEach((to, from, next) => {
 	// 登录状态判断
 	if (!Vue.prototype.$storage.get('token') && to.path !== '/login') {
@@ -65,5 +66,6 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
+*/
 
 export default router;
