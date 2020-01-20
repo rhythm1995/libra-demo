@@ -10,30 +10,21 @@ Vue.use(Router);
 const router = new Router({
   routes: [
     {
-      path: '/login',
-      name: 'Login',
+      path: '/home',
       component: () =>
         import(
-          /* webpackChunkName: "0login" */ '@/page/Login.vue'
+          /* webpackChunkName: "home" */ '@/page/Home.vue'
         ),
-      meta: {
-        title: '登录'
-      }
-    },
-    {
-      path: '/',
-      redirect: '/dashboard'
-    },
-    {
-      path: '/',
-      component: () =>
-        import(
-          /* webpackChunkName: "home" */ '@/components/Home.vue'
-        ),
-      meta: { title: 'libra-demo' },
       children: [
         ...home(),
       ]
+    },
+    {
+      path: '/search',
+      component: () =>
+        import(
+          /* webpackChunkName: "search" */ '@/page/Search.vue'
+        )
     },
     {
       path: '*',
