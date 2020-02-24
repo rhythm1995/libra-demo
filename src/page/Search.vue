@@ -23,7 +23,8 @@ export default {
     return {
       list: [],
       loading: false,
-      finished: false
+      finished: false,
+      value: ""
     };
   },
 

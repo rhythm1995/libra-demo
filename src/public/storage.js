@@ -37,7 +37,8 @@ const storage = {
     let result = '';
     if (typeof localStorage !== 'undefined') {
       try {
-        result = localStorage[action](...args);
+        const t = localStorage;
+        result = t[action](...args);
       } catch (ex) {
         console.error(`执行异常 localStorage.${  action}`, ex);
       }

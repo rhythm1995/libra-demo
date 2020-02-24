@@ -1,5 +1,7 @@
 <template>
   <div>
+    <HeaderBar></HeaderBar>
+
     <van-row class="user-links">
       <van-col span="6">
         <van-icon name="pending-payment" />待付款
@@ -30,11 +32,13 @@
 </template>
 
 <script>
+import HeaderBar from "../components/HeaderBar";
 import BottomBar from "../components/BottomBar";
 
 export default {
   components: {
-    BottomBar
+    BottomBar,
+    HeaderBar
   }
 };
 </script>
