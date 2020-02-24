@@ -58,7 +58,7 @@ const help = {
 		const dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
 		const maxPos = dict.length;
 		let pwd = '';
-		for (i = 0; i < len; i++) {
+		for (let i = 0; i < len; i++) {
 			pwd += dict.charAt(Math.floor(Math.random() * maxPos));
 		}
 		return pwd;
