@@ -71,7 +71,7 @@ export default {
   name: "dashboard",
   data() {
     return {
-      name: localStorage.getItem("ms_username"),
+      name: this.$storage.get("ms_username"),
       tableData: [],
       chartData1: {
         columns: ["日期", "访问用户", "下单用户", "下单率"],

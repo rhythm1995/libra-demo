@@ -37,7 +37,7 @@ Vue.use(ElementUI, {
 /* 使用钩子函数对路由进行权限跳转 */
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} | vue-manage-system`;
-  const role = localStorage.getItem('ms_username');
+  const role = this.$storage.get('ms_username');
   if (!role && to.path !== '/login') {
     next('/login');
   } else if (to.meta.permission) {
