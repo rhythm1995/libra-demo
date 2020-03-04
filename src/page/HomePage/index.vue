@@ -1,7 +1,5 @@
 <template>
   <div>
-    <HeaderBar></HeaderBar>
-
     <van-row class="user-links">
       <van-col span="6">
         <van-icon name="pending-payment" />待付款
@@ -26,21 +24,11 @@
       <van-cell icon="gold-coin-o" title="我的优惠券" is-link />
       <van-cell icon="gift-o" title="我收到的礼物" is-link />
     </van-cell-group>
-
-    <BottomBar></BottomBar>
   </div>
 </template>
 
 <script>
-import HeaderBar from "../components/HeaderBar";
-import BottomBar from "../components/BottomBar";
-
-export default {
-  components: {
-    BottomBar,
-    HeaderBar
-  }
-};
+export default {};
 </script>
 
 <style lang="less">

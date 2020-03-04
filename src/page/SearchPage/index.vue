@@ -7,18 +7,12 @@
     <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
       <van-cell v-for="item in list" :key="item" :title="item" />
     </van-list>
-
-    <BottomBar></BottomBar>
   </div>
 </template>
 
 <script>
-import BottomBar from "../components/BottomBar";
-
 export default {
-  components: {
-    BottomBar
-  },
+  components: {},
   data() {
     return {
       list: [],

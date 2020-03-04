@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import home from './home';
+import search from './search';
 
 Vue.use(Router);
 
@@ -14,10 +15,10 @@ const router = new Router({
       redirect: "/home"
     },
     {
-      path: '/home',
+      path: '/main',
       component: () =>
         import(
-          /* webpackChunkName: "home" */ '@/page/Home.vue'
+          /* webpackChunkName: "home" */ '@/components/MainPage.vue'
         ),
       children: [
         ...home(),
@@ -27,8 +28,11 @@ const router = new Router({
       path: '/search',
       component: () =>
         import(
-          /* webpackChunkName: "search" */ '@/page/Search.vue'
-        )
+          /* webpackChunkName: "home" */ '@/components/MainPage.vue'
+        ),
+        children: [
+          ...search(),
+        ]
     },
     {
       path: '*',

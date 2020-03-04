@@ -1,6 +1,5 @@
 <template>
   <div>
-    <router-view />
     <van-tabbar v-model="active">
       <van-tabbar-item to="home" icon="home-o">标签</van-tabbar-item>
       <van-tabbar-item to="search" icon="search">标签</van-tabbar-item>
