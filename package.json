@@ -12,7 +12,8 @@
     "build:dev": "vue-cli-service build --mode dev",
     "build:st": "vue-cli-service build --mode st",
     "build:uat": "vue-cli-service build --mode uat",
-    "build:prod": "vue-cli-service build --mode prod"
+    "build:prod": "vue-cli-service build --mode prod",
+    "new-page": "node ./build/bin/newPage.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
