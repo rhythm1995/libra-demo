@@ -95,11 +95,10 @@ $ npm run build
 希望尽量按照这个规范，会有eslint约定其中一部分规范，该eslint是对应是devops的sonar静态检测，项目地址为：https://github.com/rhythm1995/eslint-config-virgo ，可以在项目中查看每一条的含义。
 
 
-## Git工作流
+## GitHub工作流
 
 一共有以下几种分支：
  - **master——最为稳定功能最为完整的随时可发布的代码；**
- - **develop——永远是功能最新最全的分支；**
  - hotfix——修复线上代码的 bug；
  - feature——某个功能点正在开发阶段；
  - release——发布定期要上线的功能。
@@ -131,7 +130,7 @@ $ npm run build
 2. 把稳定版本
 3. 对于某些版本需要打tag定版本号
 
-如果这段简短的不足以解释清我们的工作流程，那需要看下[git工作流指南](./GITFLOW.md)。
+如果这段简短的不足以解释清我们的工作流程，那需要看下[git工作流指南](./GITHUBFLOW.md)。
 
 
 ## 提交规范
