@@ -16,4 +16,3 @@ services:
       # 覆盖容器启动后默认执行的命令。
     command: /bin/bash -c "nginx -g 'daemon off;'"
     restart: always
-    mem_limit: 2000

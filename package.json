@@ -8,6 +8,7 @@
     "serve": "vue-cli-service serve",
     "dev:st": "vue-cli-service serve --mode public",
     "dev:uat": "npm run test",
+    "docker": "docker-compose up -d --build --force-recreate",
     "build": "vue-cli-service build --mode dev",
     "build:dev": "vue-cli-service build --mode dev",
     "build:st": "vue-cli-service build --mode st",
