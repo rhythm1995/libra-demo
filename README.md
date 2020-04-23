@@ -39,8 +39,16 @@ $ cmb-cli init demo
 $ cd demo && yarn
 # 运行开发环境，项目会启动在8080端口
 $ npm run dev
+```
+
+```sh
 # 打包项目，项目会被打包到dist目录下
 $ npm run build
+```
+
+```sh
+# 在docker下运行项目
+$ npm run docker
 ```
 
 ## 目录结构
