@@ -1,7 +1,7 @@
 version: "2"
 services:
   nginx:
-    image: nginx:1.16
+    image: openresty/openresty
     container_name: libra-demo
     ports:
       # 映射端口
