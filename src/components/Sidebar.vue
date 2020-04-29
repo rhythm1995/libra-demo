@@ -12,20 +12,13 @@
     >
       <template v-for="item in items">
         <template v-if="item.subs">
-          <el-submenu
-            :index="item.index"
-            :key="item.index"
-          >
+          <el-submenu :index="item.index" :key="item.index">
             <template slot="title">
               <i :class="item.icon"></i>
               <span slot="title">{{ item.title }}</span>
             </template>
             <template v-for="subItem in item.subs">
-              <el-submenu
-                v-if="subItem.subs"
-                :index="subItem.index"
-                :key="subItem.index"
-              >
+              <el-submenu v-if="subItem.subs" :index="subItem.index" :key="subItem.index">
                 <template slot="title">{{ subItem.title }}</template>
                 <el-menu-item
                   v-for="(threeItem,i) in subItem.subs"
@@ -33,19 +26,12 @@
                   :index="threeItem.index"
                 >{{ threeItem.title }}</el-menu-item>
               </el-submenu>
-              <el-menu-item
-                v-else
-                :index="subItem.index"
-                :key="subItem.index"
-              >{{ subItem.title }}</el-menu-item>
+              <el-menu-item v-else :index="subItem.index" :key="subItem.index">{{ subItem.title }}</el-menu-item>
             </template>
           </el-submenu>
         </template>
         <template v-else>
-          <el-menu-item
-            :index="item.index"
-            :key="item.index"
-          >
+          <el-menu-item :index="item.index" :key="item.index">
             <i :class="item.icon"></i>
             <span slot="title">{{ item.title }}</span>
           </el-menu-item>
@@ -56,8 +42,7 @@
 </template>
 
 <script>
-import bus from '../common/bus';
-import router from '../router';
+import router from "../router";
 
 export default {
   data() {
@@ -65,11 +50,11 @@ export default {
       collapse: false,
       items: [
         {
-          icon: 'el-icon-lx-home',
-          index: 'dashboard',
-          title: '系统首页',
+          icon: "el-icon-lx-home",
+          index: "dashboard",
+          title: "系统首页"
         },
-				/*
+        /*
         {
           icon: 'el-icon-lx-calendar',
           index: '3',
@@ -101,22 +86,22 @@ export default {
 				},
 				*/
         {
-          icon: 'el-icon-lx-emoji',
-          index: 'icon',
-          title: '自定义图标'
+          icon: "el-icon-lx-emoji",
+          index: "icon",
+          title: "自定义图标"
         },
         {
-          icon: 'el-icon-lx-warn',
-          title: '错误处理',
-          index: 'error',
+          icon: "el-icon-lx-warn",
+          title: "错误处理",
+          index: "error",
           subs: [
             {
-              index: 'permission',
-              title: '权限测试'
+              index: "permission",
+              title: "权限测试"
             },
             {
-              index: 'cannotfind',
-              title: '404页面'
+              index: "cannotfind",
+              title: "404页面"
             }
           ]
         }
@@ -125,14 +110,14 @@ export default {
   },
   computed: {
     onRoutes() {
-      return this.$route.path.replace('/', '');
+      return this.$route.path.replace("/", "");
     }
   },
   created() {
     // 通过 Event Bus 进行组件间通信，来折叠侧边栏
-    bus.$on('collapse', msg => {
+    bus.$on("collapse", msg => {
       this.collapse = msg;
-      bus.$emit('collapse-content', msg);
+      bus.$emit("collapse-content", msg);
     });
   }
 };

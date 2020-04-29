@@ -1,12 +1,9 @@
 <template>
-  <div
-    class="tag"
-    v-if="showTag"
-  >
+  <div class="tag" v-if="showTag">
     <el-breadcrumb separator="/">
       <el-breadcrumb-item
         v-for="item in tagList"
-        :key=item.index
+        :key="item.index"
         :to="{ path: item.path }"
       >{{ item.title }}</el-breadcrumb-item>
     </el-breadcrumb>
@@ -14,12 +11,11 @@
 </template>
 
 <script>
-import bus from '../common/bus';
 export default {
   data() {
     return {
       tagList: []
-    }
+    };
   },
   watch: {
     $route(to, from) {
@@ -28,8 +24,8 @@ export default {
         this.tagList.push({
           index: to.meta.fromIndex,
           path: to.meta.fromPath || this.$route.path,
-          title: to.meta.fromTitle,
-        })
+          title: to.meta.fromTitle
+        });
       }
       this.tagList.push({
         index: to.path,
@@ -48,8 +44,8 @@ export default {
       this.tagList.push({
         index: this.$route.meta.fromIndex,
         path: this.$route.meta.fromPath || this.$route.path,
-        title: this.$route.meta.fromTitle,
-      })
+        title: this.$route.meta.fromTitle
+      });
     }
     this.tagList.push({
       index: this.$route.path,
@@ -57,8 +53,7 @@ export default {
       title: this.$route.meta.title
     });
   }
-}
-
+};
 </script>
 
 <style lang="less" scoped>
