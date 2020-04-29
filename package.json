@@ -31,7 +31,7 @@
     "@vue/cli-service": "^3.9.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.4.0",
-    "eslint-config-virgo": "^1.0.2",
+    "eslint-config-airbnb": "^18.1.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.10"
@@ -42,7 +42,7 @@
       "node": true
     },
     "extends": [
-      "eslint-config-virgo"
+      "eslint-config-airbnb"
     ],
     "parserOptions": {
       "parser": "babel-eslint"

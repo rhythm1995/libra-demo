@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
-    <v-head></v-head>
-    <v-sidebar></v-sidebar>
+    <libra-head></libra-head>
+    <libra-sidebar></libra-sidebar>
     <div class="content-box" :class="{'content-collapse':collapse}">
-      <v-tags></v-tags>
+      <libra-tags></libra-tags>
       <div class="content">
         <transition name="move" mode="out-in">
           <keep-alive :include="tagsList">
@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import vHead from "./Header.vue";
-import vSidebar from "./Sidebar.vue";
-import vTags from "./Tags.vue";
+import LibraHead from "./Header.vue";
+import LibraSidebar from "./Sidebar.vue";
+import LibraTags from "./Tags.vue";
 export default {
   data() {
     return {
@@ -28,9 +28,9 @@ export default {
     };
   },
   components: {
-    vHead,
-    vSidebar,
-    vTags
+    LibraHead,
+    LibraSidebar,
+    LibraTags
   },
   created() {
     bus.$on("collapse-content", msg => {
