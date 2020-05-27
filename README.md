@@ -92,7 +92,7 @@ $ npm run build
 ## 代码风格
 
 参考[代码规范指南](./CODESTYLE.md)
-希望尽量按照这个规范，会有eslint约定其中一部分规范，该eslint是对应是devops的sonar静态检测，项目地址为：https://github.com/rhythm1995/eslint-config-virgo ，可以在项目中查看每一条的含义。
+希望尽量按照这个规范
 
 ## GitHub工作流
 一共有以下几种分支：
