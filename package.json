@@ -1,18 +1,17 @@
 {
   "name": "libra-demo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "npm run serve",
     "lint": "eslint --fix --ext .js src",
-    "serve": "vue-cli-service serve",
-    "dev:st": "vue-cli-service serve --mode public",
-    "dev:uat": "npm run test",
+    "serve": "vue-cli-service serve --mode dev",
+    "dev:test": "vue-cli-service serve --mode test",
+    "dev:prod": "vue-cli-service serve --mode prod",
     "docker": "docker-compose up -d --build --force-recreate",
     "build": "vue-cli-service build --mode dev",
     "build:dev": "vue-cli-service build --mode dev",
-    "build:st": "vue-cli-service build --mode st",
-    "build:uat": "vue-cli-service build --mode uat",
+    "build:test": "vue-cli-service build --mode test",
     "build:prod": "vue-cli-service build --mode prod",
     "new-page": "node ./build/bin/newPage.js"
   },
@@ -31,7 +30,7 @@
     "@vue/cli-service": "^3.9.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.4.0",
-    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-egg": "^8.0.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.10"
@@ -42,7 +41,7 @@
       "node": true
     },
     "extends": [
-      "eslint-config-airbnb"
+      "eslint-config-egg"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
