@@ -1,6 +1,9 @@
 # 企业级Vue脚手架
 > 约定大于配置的Vue前端基座式脚手架，可以认为是一套整合的方案，提供一个前端“最佳实践”的组合配置。开发者需要的就是在这套架构的约束下填充自己的页面与业务代码。
 
+![](https://img.shields.io/github/license/rhythm1995/libra-demo)
+![](https://img.shields.io/github/issues/rhythm1995/libra-demo)
+
 ## 项目功能
 vue有着渲染性能高、开发速度快、全功能配置的三大特点，相比angular定制型强，相比react开发速度快，如果不对vue做一定规范，在大型企业级单页应用中并不突出，该项目约定目录与实现方式，通过“约定大于配置”的方式，在约束下填充不同的页面与业务代码，提升维护性、便捷性、可靠性，有效弥补了普通vue的缺陷。目前功能包括：
 
@@ -23,8 +26,6 @@ vue有着渲染性能高、开发速度快、全功能配置的三大特点，�
 未来计划的工作：
 - 单元测试
 - 段对端测试
-- docker/nginx支持
-- 自动生成devops配置文件
 
 ## 运行项目
 
@@ -32,9 +33,9 @@ vue有着渲染性能高、开发速度快、全功能配置的三大特点，�
 
 ```sh
 # 安装命令行工具
-$ npm install -g cmb-cli
+$ npm install -g libra-create
 # 生成项目
-$ cmb-cli init demo
+$ libra-cli init demo
 # 安装依赖
 $ cd demo && yarn
 # 运行开发环境，项目会启动在8080端口
@@ -65,9 +66,6 @@ $ npm run build
 │   ├── assets（静态资源）
 │   │   ├── css
 │   │   └── img
-│   ├── common（一些可选用模块）
-│   │   ├── bus.js（全局bus通信）
-│   │   └── directives.js（自定义指令）
 │   ├── components（公共组件）
 │   ├── main.js（入口）
 │   ├── page（路由页面）
@@ -76,6 +74,8 @@ $ npm run build
 │   │   ├── help.js（辅助函数）
 │   │   └── storage.js（storage存储）
 │   │   └── request.js（axios二次封装）
+│   │   ├── bus.js（全局bus通信）
+│   │   └── directives.js（自定义指令）
 │   ├── store（vuex状态管理）
 │   └── router（路由）
 │   │   ├── home.js（home的路由）
@@ -94,9 +94,7 @@ $ npm run build
 参考[代码规范指南](./CODESTYLE.md)
 希望尽量按照这个规范，会有eslint约定其中一部分规范，该eslint是对应是devops的sonar静态检测，项目地址为：https://github.com/rhythm1995/eslint-config-virgo ，可以在项目中查看每一条的含义。
 
-
-## Git工作流
-
+## GitHub工作流
 一共有以下几种分支：
  - **master——最为稳定功能最为完整的随时可发布的代码；**
  - **develop——永远是功能最新最全的分支；**
